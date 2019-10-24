@@ -12,14 +12,11 @@ class Song
   end
   
   def self.new_by_filename(file) # Michael Jackson - Black or White - pop.mp3
-  # need to split artist at "-" and song name at "-"
-    artist_name = file.split(" - ")[0] 
+  
+    artist_name = file.split(" - ")[0]  # split artist at " - " and song name at " - "
     song_name = file.split(" - ")[1]
-    # binding.pry
     new_song = self.new(song_name)
-    # binding.pry
-    new_song.artist_name=artist_name
-  # binding.pry
+    new_song.artist_name = artist_name
     new_song
   end
   
